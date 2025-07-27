@@ -1,0 +1,8 @@
+name = "vite+react"
+compatibility_date = "2025-07-22"
+compatibility_flags = ["nodejs_compat_v2"]
+workers_dev = true
+main = "src/index.ts"
+
+[site]
+bucket = "dist"
