@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
 import { intlayerPlugin } from 'vite-intlayer'
 import { VitePWA } from 'vite-plugin-pwa'
+import removeConsole from 'vite-plugin-remove-console'
 import { ViteSharedBuffer } from './src/lib/plugins/isolation'
 
 // https://vite.dev/config/
@@ -51,7 +52,8 @@ export default defineConfig({
         enabled: true
       }
     }),
-    ViteSharedBuffer()
+    ViteSharedBuffer(),
+    removeConsole()
   ],
   worker: {
     format: 'es'
